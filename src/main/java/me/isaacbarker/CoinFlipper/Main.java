@@ -47,8 +47,12 @@ public class Main {
         System.out.println(BOLD + "Please enter your number of coin flips:" + RESET);
 
         // Get user input
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
+        int n = 0;
+
+        while (n <= 0) {
+            Scanner scanner = new Scanner(System.in);
+            n = scanner.nextInt();
+        }
 
         System.out.println("Preparing to simulate " + n + " flips...");
 
@@ -70,7 +74,7 @@ public class Main {
             }
 
             // Send info
-            System.out.println(BOLD + "[" + simNum + "]" + RESET + " Flipped and rolled " + UNDERLINE + stringRes + RESET);
+            System.out.println(BOLD + "[" + simNum + "]" + RESET + " Flipped and landed on " + UNDERLINE + stringRes + RESET);
         }
 
         // Send info
